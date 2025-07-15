@@ -1,0 +1,18 @@
+# dune exec hello
+# OCAMLPARAM: unset
+# Shared cache: enabled-except-user-rules
+# Shared cache location: /home/sky/.cache/dune/db
+# Workspace root: /home/sky/Projects/OCAML/hello
+# Auto-detected concurrency: 16
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /home/sky/.opam/default/bin/ocamlc.opt -config > /tmp/dune_b59645_output
+$ (cd _build/default && /home/sky/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I /home/sky/.opam/default/lib/parsexp -I /home/sky/.opam/default/lib/ppx_deriving/runtime -I /home/sky/.opam/default/lib/sexplib -I /home/sky/.opam/default/lib/sexplib0 -I lib/.hello.objs/byte -I lib/.hello.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /home/sky/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe /home/sky/.opam/default/lib/ppx_deriving/runtime/ppx_deriving_runtime.cmxa lib/hello.cmxa /home/sky/.opam/default/lib/sexplib0/sexplib0.cmxa /home/sky/.opam/default/lib/parsexp/parsexp.cmxa /home/sky/.opam/default/lib/sexplib/sexplib.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
