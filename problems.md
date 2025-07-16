@@ -8,38 +8,38 @@ Here are some OCaml exercises, structured in increasing difficulty, to help you 
 
 *Try it in the OCaml toplevel (`ocaml` or `utop`)!*
 
-### Exercises:
+### Exercises
 
-#### Hello OCaml:
+- [x] **Hello OCaml:**
 
 Write a function `greet name` that takes a string `name` and returns a string like "Hello, [name]!".
 
 **Example:** `greet "Alice"` should return `"Hello, Alice!"`
 
-#### Sum Two Numbers:
+- [ ] **Sum Two Numbers:**
 
 Write a function `add_ints x y` that takes two integers `x` and `y` and returns their sum.
 
 **Example:** `add_ints 5 3` should return `8`.
 
-#### Is Even?:
+- [ ] **Is Even?:**
 
 Write a function `is_even n` that takes an integer `n` and returns `true` if `n` is even, `false` otherwise. Use the modulo operator (`mod`).
 
 **Example:** `is_even 4` should return `true`, `is_even 7` should return `false`.
 
-#### Factorial (Recursive):
+- [ ] **Factorial (Recursive):**
 
 Write a recursive function `factorial n` that calculates the factorial of a non-negative integer `n`. Remember `factorial 0 = 1`.
 
 **Example:** `factorial 5` should return `120`.
 
-#### Absolute Value (using if/else and match):
+- [ ] **Absolute Value (using if/else and match):**
 
 Write two versions of a function `abs x` that returns the absolute value of an integer `x`.
 
-*   One version using an `if/else` expression.
-*   One version using a `match` expression (e.g., `match x with ...`).
+- One version using an `if/else` expression.
+- One version using a `match` expression (e.g., `match x with ...`).
 
 **Example:** `abs -5` should return `5`, `abs 3` should return `3`.
 
@@ -47,33 +47,33 @@ Write two versions of a function `abs x` that returns the absolute value of an i
 
 **Concepts:** List type (`'a list`), tuple types, list recursion, common list operations, introducing higher-order functions (`map`, `filter`).
 
-### Exercises:
+### Exercises
 
-#### List Length:
+- [ ] **List Length:**
 
 Write a recursive function `list_length lst` that takes a list `lst` of any type and returns its length (an `int`). Do not use `List.length`.
 
 **Example:** `list_length [1; 2; 3]` should return `3`. `list_length []` should return `0`.
 
-#### Sum List Elements:
+- [ ] **Sum List Elements:**
 
 Write a recursive function `sum_list_ints lst` that takes a list of integers `lst` and returns their sum.
 
 **Example:** `sum_list_ints [10; 20; 30]` should return `60`.
 
-#### Check if Element Exists (contains):
+- [ ] **Check if Element Exists (contains):**
 
 Write a recursive function `contains elem lst` that takes an element `elem` and a list `lst` (of the same type) and returns `true` if `elem` is in `lst`, `false` otherwise.
 
 **Example:** `contains 3 [1; 2; 3; 4]` should return `true`. `contains 5 [1; 2; 3; 4]` should return `false`.
 
-#### Map a Function Over a List (Implement your own map):
+- [ ] **Map a Function Over a List (Implement your own map):**
 
 Write a higher-order function `my_map f lst` that takes a function `f` and a list `lst`. It should apply `f` to each element of `lst` and return a new list with the results. Do not use `List.map`.
 
 **Example:** `my_map (fun x -> x * 2) [1; 2; 3]` should return `[2; 4; 6]`.
 
-#### Filter a List (Implement your own filter):
+- [ ] **Filter a List (Implement your own filter):**
 
 Write a higher-order function `my_filter pred lst` that takes a predicate function `pred` (a function returning `bool`) and a list `lst`. It should return a new list containing only elements for which `pred` returns `true`. Do not use `List.filter`.
 
@@ -83,21 +83,21 @@ Write a higher-order function `my_filter pred lst` that takes a predicate functi
 
 **Concepts:** `option` type (for optional values/absence), record types, basic custom types (`type t = ...`), polymorphic functions, error handling with `option` or `result`.
 
-### Exercises:
+### Exercises
 
-#### Safe Division:
+- [ ] **Safe Division:**
 
 Write a function `safe_divide x y` that takes two floats `x` and `y`. If `y` is `0.0`, it should return `None`. Otherwise, it should return `Some (x / y)`.
 
 **Example:** `safe_divide 10.0 2.0` should return `Some 5.0`. `safe_divide 5.0 0.0` should return `None`.
 
-#### Find in List (returning option):
+- [ ] **Find in List (returning option):**
 
 Write a recursive function `find_first pred lst` that takes a predicate function `pred` and a list `lst`. It should return `Some x` for the first element `x` in `lst` for which `pred x` is `true`. If no such element is found, return `None`.
 
 **Example:** `find_first (fun x -> x > 3) [1; 2; 4; 5]` should return `Some 4`. `find_first (fun x -> x > 10) [1; 2; 4]` should return `None`.
 
-#### Student Record:
+- [ ] **Student Record:**
 
 Define a record type `student` with fields for `name` (string), `id` (int), and `gpa` (float).
 
@@ -105,7 +105,7 @@ Write a function `is_honor_roll s` that takes a `student` record `s` and returns
 
 **Example:** Define a student `alice = { name = "Alice"; id = 101; gpa = 3.8 }`. `is_honor_roll alice` should be `true`.
 
-#### Map Option:
+- [ ] **Map Option:**
 
 Write a function `map_option f opt` that takes a function `f` and an `option` value `opt`. If `opt` is `Some x`, apply `f` to `x` and return `Some (f x)`. If `opt` is `None`, return `None`. (This is essentially `Option.map`).
 
@@ -115,9 +115,9 @@ Write a function `map_option f opt` that takes a function `f` and an `option` va
 
 **Concepts:** Custom recursive data types (variants/ADTs), modeling more complex structures, efficient recursion (tail recursion and accumulator pattern).
 
-### Exercises:
+### Exercises
 
-#### Simple Arithmetic Expressions (ADT):
+- [ ] **Simple Arithmetic Expressions (ADT):**
 
 Define a recursive variant type `expr` to represent simple arithmetic expressions:
 
@@ -133,7 +133,7 @@ Write a recursive function `eval e` that takes an `expr` `e` and returns its int
 
 **Example:** `eval (Add (Int 5, Int 3))` should return `8`. `eval (Mul (Add (Int 2, Int 3), Int 4))` should return `20`.
 
-#### Binary Tree (ADT):
+- [ ] **Binary Tree (ADT):**
 
 Define a recursive variant type `tree` for a binary tree that can hold values of any type (`'a`).
 
@@ -146,19 +146,21 @@ type 'a tree =
 Write a function `tree_size t` that takes a `tree` `t` and returns the total number of nodes in the tree.
 
 **Example:**
+
 ```ocaml
 let my_tree = Node (Node (Leaf, 1, Leaf), 2, Node (Leaf, 3, Leaf))
 tree_size my_tree
 ```
+
 should return `3`.
 
-#### Tree Traversal (Inorder):
+- [ ] **Tree Traversal (Inorder):**
 
 Using the `tree` type from the previous exercise, write a function `inorder_traversal t` that returns a list of elements in the tree, ordered by an inorder traversal.
 
 **Example:** `inorder_traversal my_tree` should return `[1; 2; 3]`.
 
-#### Tail-Recursive List Reverse:
+- [ ] **Tail-Recursive List Reverse:**
 
 Rewrite the `list_reverse` function (from Level 2 if you implemented it, or just imagine it) to be tail-recursive. This typically involves an accumulator argument.
 
@@ -170,9 +172,9 @@ Rewrite the `list_reverse` function (from Level 2 if you implemented it, or just
 
 **Concepts:** Structuring code with modules (`.ml` files), defining interfaces with signatures (`.mli` files, `module type`), writing modules that take other modules as arguments (`functor`).
 
-### Exercises:
+### Exercises
 
-#### Basic Math Module:
+- [ ] **Basic Math Module:**
 
 Create a file `math.ml` and define a module `Math` inside it that contains functions for basic arithmetic operations (add, sub, mul, div).
 
@@ -180,19 +182,19 @@ Create a corresponding interface file `math.mli` that defines the signature for 
 
 Test by opening `Math` and using its functions (e.g., `open Math;; Math.add 5 3;;`).
 
-#### Module Signature for a Set:
+- [ ] **Module Signature for a Set:**
 
 Define a module signature `SET` in a file like `set_sig.mli`. This signature should include types and functions for a basic set of elements:
 
-*   `type 'a t` (the type of the set)
-*   `val empty : 'a t`
-*   `val add : 'a -> 'a t -> 'a t` (add an element)
-*   `val mem : 'a -> 'a t -> bool` (check if an element is in the set)
-*   `val to_list : 'a t -> 'a list` (convert set to a list)
+- `type 'a t` (the type of the set)
+- `val empty : 'a t`
+- `val add : 'a -> 'a t -> 'a t` (add an element)
+- `val mem : 'a -> 'a t -> bool` (check if an element is in the set)
+- `val to_list : 'a t -> 'a list` (convert set to a list)
 
 (No implementation needed for this part, just the signature.)
 
-#### Implement a Set Module (using sorted lists):
+- [ ] **Implement a Set Module (using sorted lists):**
 
 Create a file `list_set.ml` and implement a module `ListSet` that satisfies the `SET` signature you defined in the previous exercise.
 
@@ -200,7 +202,7 @@ Represent the set internally as a sorted list to avoid duplicates and allow effi
 
 (Hint: For `add`, ensure the list remains sorted and unique. For `mem`, you can use list recursion, taking advantage of the sorted property to stop early.)
 
-#### Queue Module (Advanced Data Structure):
+- [ ] **Queue Module (Advanced Data Structure):**
 
 Implement a module `Queue` that represents a queue data structure. A common functional implementation uses two lists: `front` (for dequeuing) and `back` (for enqueuing).
 
@@ -208,13 +210,13 @@ When the `front` list is empty during a dequeue operation, reverse the `back` li
 
 Include functions:
 
-*   `type 'a t`
-*   `val empty : 'a t`
-*   `val is_empty : 'a t -> bool`
-*   `val enqueue : 'a -> 'a t -> 'a t`
-*   `val dequeue : 'a t -> ('a * 'a t) option` (returns `Some (element, new_queue)` or `None`)
+- `type 'a t`
+- `val empty : 'a t`
+- `val is_empty : 'a t -> bool`
+- `val enqueue : 'a -> 'a t -> 'a t`
+- `val dequeue : 'a t -> ('a * 'a t) option` (returns `Some (element, new_queue)` or `None`)
 
-#### Functor for Ordered Sets (Hardest):
+- [ ] **Functor for Ordered Sets (Hardest):**
 
 Define a module signature `ORDERED_TYPE` that specifies what a type needs to provide to be "orderable" (e.g., a `t` type and a `compare` function).
 
