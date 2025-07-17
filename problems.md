@@ -16,25 +16,25 @@ Write a function `greet name` that takes a string `name` and returns a string li
 
 **Example:** `greet "Alice"` should return `"Hello, Alice!"`
 
-- [ ] **Sum Two Numbers:**
+- [x] **Sum Two Numbers:**
 
 Write a function `add_ints x y` that takes two integers `x` and `y` and returns their sum.
 
 **Example:** `add_ints 5 3` should return `8`.
 
-- [ ] **Is Even?:**
+- [x] **Is Even?:**
 
 Write a function `is_even n` that takes an integer `n` and returns `true` if `n` is even, `false` otherwise. Use the modulo operator (`mod`).
 
 **Example:** `is_even 4` should return `true`, `is_even 7` should return `false`.
 
-- [ ] **Factorial (Recursive):**
+- [x] **Factorial (Recursive):**
 
 Write a recursive function `factorial n` that calculates the factorial of a non-negative integer `n`. Remember `factorial 0 = 1`.
 
 **Example:** `factorial 5` should return `120`.
 
-- [ ] **Absolute Value (using if/else and match):**
+- [x] **Absolute Value (using if/else and match):**
 
 Write two versions of a function `abs x` that returns the absolute value of an integer `x`.
 
@@ -49,31 +49,31 @@ Write two versions of a function `abs x` that returns the absolute value of an i
 
 ### Exercises
 
-- [ ] **List Length:**
+- [x] **List Length:**
 
 Write a recursive function `list_length lst` that takes a list `lst` of any type and returns its length (an `int`). Do not use `List.length`.
 
 **Example:** `list_length [1; 2; 3]` should return `3`. `list_length []` should return `0`.
 
-- [ ] **Sum List Elements:**
+- [x] **Sum List Elements:**
 
 Write a recursive function `sum_list_ints lst` that takes a list of integers `lst` and returns their sum.
 
 **Example:** `sum_list_ints [10; 20; 30]` should return `60`.
 
-- [ ] **Check if Element Exists (contains):**
+- [x] **Check if Element Exists (contains):**
 
 Write a recursive function `contains elem lst` that takes an element `elem` and a list `lst` (of the same type) and returns `true` if `elem` is in `lst`, `false` otherwise.
 
 **Example:** `contains 3 [1; 2; 3; 4]` should return `true`. `contains 5 [1; 2; 3; 4]` should return `false`.
 
-- [ ] **Map a Function Over a List (Implement your own map):**
+- [x] **Map a Function Over a List (Implement your own map):**
 
 Write a higher-order function `my_map f lst` that takes a function `f` and a list `lst`. It should apply `f` to each element of `lst` and return a new list with the results. Do not use `List.map`.
 
 **Example:** `my_map (fun x -> x * 2) [1; 2; 3]` should return `[2; 4; 6]`.
 
-- [ ] **Filter a List (Implement your own filter):**
+- [x] **Filter a List (Implement your own filter):**
 
 Write a higher-order function `my_filter pred lst` that takes a predicate function `pred` (a function returning `bool`) and a list `lst`. It should return a new list containing only elements for which `pred` returns `true`. Do not use `List.filter`.
 
@@ -85,13 +85,13 @@ Write a higher-order function `my_filter pred lst` that takes a predicate functi
 
 ### Exercises
 
-- [ ] **Safe Division:**
+- [x] **Safe Division:**
 
 Write a function `safe_divide x y` that takes two floats `x` and `y`. If `y` is `0.0`, it should return `None`. Otherwise, it should return `Some (x / y)`.
 
 **Example:** `safe_divide 10.0 2.0` should return `Some 5.0`. `safe_divide 5.0 0.0` should return `None`.
 
-- [ ] **Find in List (returning option):**
+- [x] **Find in List (returning option):**
 
 Write a recursive function `find_first pred lst` that takes a predicate function `pred` and a list `lst`. It should return `Some x` for the first element `x` in `lst` for which `pred x` is `true`. If no such element is found, return `None`.
 
