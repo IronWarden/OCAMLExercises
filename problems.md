@@ -97,7 +97,7 @@ Write a recursive function `find_first pred lst` that takes a predicate function
 
 **Example:** `find_first (fun x -> x > 3) [1; 2; 4; 5]` should return `Some 4`. `find_first (fun x -> x > 10) [1; 2; 4]` should return `None`.
 
-- [ ] **Student Record:**
+- [x] **Student Record:**
 
 Define a record type `student` with fields for `name` (string), `id` (int), and `gpa` (float).
 
@@ -105,7 +105,7 @@ Write a function `is_honor_roll s` that takes a `student` record `s` and returns
 
 **Example:** Define a student `alice = { name = "Alice"; id = 101; gpa = 3.8 }`. `is_honor_roll alice` should be `true`.
 
-- [ ] **Map Option:**
+- [x] **Map Option:**
 
 Write a function `map_option f opt` that takes a function `f` and an `option` value `opt`. If `opt` is `Some x`, apply `f` to `x` and return `Some (f x)`. If `opt` is `None`, return `None`. (This is essentially `Option.map`).
 

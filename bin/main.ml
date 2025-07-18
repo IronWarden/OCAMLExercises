@@ -65,15 +65,46 @@
 (*let safe_division x y =  *)
 (*    if y == 0.0 then None else Some(x/.y)   *)
 (**)
-let print_float_option opt =
-    match opt with
-        | Some x -> string_of_int x 
-        | None -> "None" 
+(* let print_float_option opt = *)
+(*     match opt with *)
+(*         | Some x -> string_of_int x  *)
+(*         | None -> "None"  *)
 
 (* Find in a list *)
-let rec find_first pred list = 
-    match list with 
-        | [] -> None
-        | h :: t -> if (pred h) then Some h else find_first pred t 
+(* let rec find_first pred list =  *)
+(*     match list with  *)
+(*         | [] -> None *)
+(*         | h :: t -> if (pred h) then Some h else find_first pred t  *)
 
-let () = print_string (print_float_option(find_first (fun x -> x mod 2 == 0) [1; 1; 3; 3; 5; 6; 7; 8; 9; 10]))
+(* type student =  { *)
+(*     name: string; *)
+(*     id: int; *)
+(*     gpa: float *)
+(* } *)
+(**)
+(* let is_honor_roll s =  *)
+(*     if s.gpa >= 3.5 then true else false  *)
+(**)
+(* let string_of_student s = *)
+(*     "Name: " ^ s.name ^ ", ID: " ^ (string_of_int s.id) ^ ", GPA: " ^ (string_of_float s.gpa) *)
+(**)
+(* let john = { *)
+(*     name = "John"; *)
+(*     id = 10; *)
+(*     gpa = 4.0; *)
+(* } *)
+(**)
+
+let map_option f opt =
+    match opt with 
+        | None -> None
+        | Some x -> Some (f x)
+
+let string_of_option opt = 
+    match opt with 
+    | None -> "None"
+    | Some x -> "Some " ^ (string_of_int x)
+
+let () = print_endline (string_of_option (map_option (fun x-> x + 1) (Some 5)))
+
+
