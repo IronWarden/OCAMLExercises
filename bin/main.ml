@@ -94,17 +94,48 @@
 (*     gpa = 4.0; *)
 (* } *)
 (**)
+(* let map_option f opt = *)
+(*     match opt with  *)
+(*         | None -> None *)
+(*         | Some x -> Some (f x) *)
+(**)
+(* let string_of_option opt =  *)
+(*     match opt with  *)
+(*     | None -> "None" *)
+(*     | Some x -> "Some " ^ (string_of_int x) *)
 
-let map_option f opt =
-    match opt with 
-        | None -> None
-        | Some x -> Some (f x)
 
-let string_of_option opt = 
-    match opt with 
-    | None -> "None"
-    | Some x -> "Some " ^ (string_of_int x)
+type expr =
+  | Int of int
+  | Add of expr * expr
+  | Sub of expr * expr
+  | Mul of expr * expr
 
-let () = print_endline (string_of_option (map_option (fun x-> x + 1) (Some 5)))
+
+(* Write a recursive function `eval e` that takes an `expr` `e` and returns its integer result. *)
+let rec eval e = 
+    match e with 
+        | Int i -> i
+        | Add (e1, e2) -> eval e1 + eval e2
+        | Sub (e1, e2) -> eval e1 - eval e2
+        | Mul (e1, e2) -> eval e1 * eval e2
+
+let rec string_of_expr e =
+    match e with
+    | Int i -> string_of_int i
+    | Add (e1, e2) -> "(" ^ (string_of_expr e1) ^ " + " ^ (string_of_expr e2) ^ ")"
+    | Sub (e1, e2) -> "(" ^ (string_of_expr e1) ^ " - " ^ (string_of_expr e2) ^ ")"
+    | Mul (e1, e2) -> "(" ^ (string_of_expr e1) ^ " * " ^ (string_of_expr e2) ^ ")"
+
+let () = 
+    let expr_to_print = Add (Int 5, Int 3) in
+    let expr_to_print_2 = Sub (Int 10, Int 4) in
+    let expr_to_print_3 = Mul (Int 2, Int 6) in
+    print_endline ("Expression: " ^ (string_of_expr expr_to_print));
+    print_endline ("Result: " ^ (string_of_int(eval expr_to_print)));
+    print_endline ("Expression: " ^ (string_of_expr expr_to_print_2));
+    print_endline ("Result: " ^ (string_of_int(eval expr_to_print_2)));
+    print_endline ("Expression: " ^ (string_of_expr expr_to_print_3));
+    print_endline ("Result: " ^ (string_of_int(eval expr_to_print_3)))
 
 

@@ -117,7 +117,7 @@ Write a function `map_option f opt` that takes a function `f` and an `option` va
 
 ### Exercises
 
-- [ ] **Simple Arithmetic Expressions (ADT):**
+- [x] **Simple Arithmetic Expressions (ADT):**
 
 Define a recursive variant type `expr` to represent simple arithmetic expressions:
 
