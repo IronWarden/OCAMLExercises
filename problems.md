@@ -133,7 +133,7 @@ Write a recursive function `eval e` that takes an `expr` `e` and returns its int
 
 **Example:** `eval (Add (Int 5, Int 3))` should return `8`. `eval (Mul (Add (Int 2, Int 3), Int 4))` should return `20`.
 
-- [ ] **Binary Tree (ADT):**
+- [x] **Binary Tree (ADT):**
 
 Define a recursive variant type `tree` for a binary tree that can hold values of any type (`'a`).
 

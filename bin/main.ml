@@ -105,37 +105,37 @@
 (*     | Some x -> "Some " ^ (string_of_int x) *)
 
 
-type expr =
-  | Int of int
-  | Add of expr * expr
-  | Sub of expr * expr
-  | Mul of expr * expr
+(* type expr = *)
+(*   | Int of int *)
+(*   | Add of expr * expr *)
+(*   | Sub of expr * expr *)
+(*   | Mul of expr * expr *)
+(**)
+(**)
+(* (* Write a recursive function `eval e` that takes an `expr` `e` and returns its integer result. *) *)
+(* let rec eval e =  *)
+(*     match e with  *)
+(*         | Int i -> i *)
+(*         | Add (e1, e2) -> eval e1 + eval e2 *)
+(*         | Sub (e1, e2) -> eval e1 - eval e2 *)
+(*         | Mul (e1, e2) -> eval e1 * eval e2 *)
+(**)
+(* let rec string_of_expr e = *)
+(*     match e with *)
+(*     | Int i -> string_of_int i *)
+(*     | Add (e1, e2) -> "(" ^ (string_of_expr e1) ^ " + " ^ (string_of_expr e2) ^ ")" *)
+(*     | Sub (e1, e2) -> "(" ^ (string_of_expr e1) ^ " - " ^ (string_of_expr e2) ^ ")" *)
+(*     | Mul (e1, e2) -> "(" ^ (string_of_expr e1) ^ " * " ^ (string_of_expr e2) ^ ")" *)
 
+type 'a tree =
+  | Leaf
+  | Node of 'a tree * 'a * 'a tree
 
-(* Write a recursive function `eval e` that takes an `expr` `e` and returns its integer result. *)
-let rec eval e = 
-    match e with 
-        | Int i -> i
-        | Add (e1, e2) -> eval e1 + eval e2
-        | Sub (e1, e2) -> eval e1 - eval e2
-        | Mul (e1, e2) -> eval e1 * eval e2
-
-let rec string_of_expr e =
-    match e with
-    | Int i -> string_of_int i
-    | Add (e1, e2) -> "(" ^ (string_of_expr e1) ^ " + " ^ (string_of_expr e2) ^ ")"
-    | Sub (e1, e2) -> "(" ^ (string_of_expr e1) ^ " - " ^ (string_of_expr e2) ^ ")"
-    | Mul (e1, e2) -> "(" ^ (string_of_expr e1) ^ " * " ^ (string_of_expr e2) ^ ")"
+(* Write a function `tree_size t` that takes a `tree` `t` and returns the total number of nodes in the tree. *)
+let rec tree_size = function 
+        | Leaf -> 0
+        | Node (left, _, right) -> 1 + tree_size left + tree_size right  
 
 let () = 
-    let expr_to_print = Add (Int 5, Int 3) in
-    let expr_to_print_2 = Sub (Int 10, Int 4) in
-    let expr_to_print_3 = Mul (Int 2, Int 6) in
-    print_endline ("Expression: " ^ (string_of_expr expr_to_print));
-    print_endline ("Result: " ^ (string_of_int(eval expr_to_print)));
-    print_endline ("Expression: " ^ (string_of_expr expr_to_print_2));
-    print_endline ("Result: " ^ (string_of_int(eval expr_to_print_2)));
-    print_endline ("Expression: " ^ (string_of_expr expr_to_print_3));
-    print_endline ("Result: " ^ (string_of_int(eval expr_to_print_3)))
-
-
+    let my_tree = Node (Node (Leaf, 1, Leaf), 2, Node (Leaf, 3, Leaf))in
+    print_endline (string_of_int (tree_size my_tree))
